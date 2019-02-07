@@ -1,15 +1,40 @@
-<div class="container">
-  <div class="margin-header">
-    <nav class="navbar navbar-expand-lg navbar-light">
-      <%= image_tag "logo_pinterest.png", :alt=> "logo_pinterest", :width=>"85", :height=>"55" %>
-      <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-lg-2" type="search" placeholder="Buscar" aria-label="Search" >
-      </form>
-      <a class="navbar-brand" href="#">Home</a>
-      <div>
-        <a class="navbar-brand" href="#"><%= image_tag "usuario.png", :alt=> "usuario_pinterest", :width=>"50", :height=>"50" %></a>
-        <a class="navbar-brand" href="#">Usuario</a>
-      </div>
-    </nav>
+<nav class="navbar navbar-expand-lg navbar-light bg-white">
+ 
+  <!-- LOGO CENTRAL -->
+  <a class="navbar-brand" href="#">
+    <%= image_tag "logo_pinterest.png", :alt=> "logo_pinterest", :width=>"100", :height=>"100%" %>
+  </a>
+
+  <!-- MOBILE : esto para funcione el resposivo y se combierta en boton cuando sea pequeña la pantalla-->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarcentral">
+
+    <!-- FORMULARIO DE BUSQUEDA --> 
+    <form class="form-inline my-3 my-lg-0 menubarra" >
+      <input class="form-control menubarra"  type="search" placeholder="Buscar" aria-label="Search">
+    </form>
+
+
+    <ul class="navbar-nav mr-auto">
+
+      <li class="nav-item active">
+        <a class="nav-link" href="home"><h4>Home</h4> <span class="sr-only">(current)</span></a>
+      </li>
+
+      <li> 
+        <a class="navbar-brand" href="#"><%= image_tag "usuario.png", :alt=> "usuario_pinterest", :width=>"40", :height=>"40" %>
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="pines"><h4>Usuario</h4></a>
+      </li>
+      
+
+    </ul>
+    
   </div>
-</div>
+</nav>
