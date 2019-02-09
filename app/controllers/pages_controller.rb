@@ -3,6 +3,7 @@ class PagesController < ApplicationController
   end
 
   def home
+  	@pins = Pin.all
   end
 
 end
