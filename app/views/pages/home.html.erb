@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
-    <% 3.times do %>
-    	<%= render 'pages/card' %>
+  	<% @pins.each do |pin| %>
+     <%= render 'pages/card', pin:pin %>
     <% end %>
     
   </div>
