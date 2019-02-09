@@ -3,5 +3,14 @@
 }
 
 .menubarra{
-	width: 90% !important;
+	width: 60% !important;
+
+}
+
+.btn{
+	padding-left: 15px;
+
+}
+.img-custom{
+	height: 50px;
 }
