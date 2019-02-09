@@ -21,29 +21,15 @@
     </form>
 
 
-    <ul class="navbar-nav mr-auto">
 
-      <li class="nav-item active">
-        <a class="nav-link" href="home"><h4>Home</h4> <span class="sr-only">(current)</span></a>
-      </li>
-
-      <li> 
-        <a class="navbar-brand" href="#"><%= image_tag "usuario.png", :alt=> "usuario_pinterest", :width=>"40", :height=>"40" %>
-        </a>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link" href="pines"><h4>Usuario</h4></a>
-      </li>
-      
-
-    </ul>
 
     <ul class="nav navbar-nav navbar-right">
       <% if current_user.nil? %>
         <li><a class="btn btn-primary" href="<%= new_user_session_path %>">Ingreso</a></li>
         <li><a class="btn btn-primary" href="<%= new_user_registration_path %>">Registro</a></li>
       <% else %>
+      <%= current_user.email %>
+      <%= image_tag current_user.avatar, class: 'img-custom img-circle' %>
         <li><a class="btn btn-primary" href="<%= destroy_user_session_path %>" 
                data-method="delete">Salir</a></li>  
       <% end %>   
