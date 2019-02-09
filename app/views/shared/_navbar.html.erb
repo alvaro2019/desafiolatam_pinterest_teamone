@@ -1,15 +1,31 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  
-    <a class="navbar-brand" href="#">
-    <%= image_tag "logo_pinterest.png", :alt=> "logo_pinterest", :width=>"100", :height=>"100%" %>
-  </a>
-<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+
     <span class="navbar-toggler-icon"></span>
   </button>
   
   <form class="form-inline my-2 my-lg-0" style="width:90%;">
       <input class="form-control mr-sm-2" style="width:90%;" type="search" placeholder="Buscar" aria-label="Search">
   </form>
+
+  <div class="collapse navbar-collapse" id="navbarcentral">
+
+    <!-- FORMULARIO DE BUSQUEDA --> 
+    <form class="form-inline my-3 my-lg-0 menubarra" >
+      <input class="form-control menubarra"  type="search" placeholder="Buscar" aria-label="Search">
+    </form>
+
+
+
+
+    <ul class="nav navbar-nav navbar-right">
+      <% if current_user.nil? %>
+        <li><a class="btn btn-primary" href="<%= new_user_session_path %>">Ingreso</a></li>
+        <li><a class="btn btn-primary" href="<%= new_user_registration_path %>">Registro</a></li>
+      <% else %>
+      <%= current_user.email %>
+      <%= image_tag current_user.avatar, class: 'img-custom img-circle' %>
+        <li><a class="btn btn-primary" href="<%= destroy_user_session_path %>" 
+               data-method="delete">Salir</a></li>  
+      <% end %>   
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
