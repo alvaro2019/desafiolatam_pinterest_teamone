@@ -1,4 +1,11 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-white">
+  <%= link_to pages_home_path do %> 
+  <!-- LOGO CENTRAL -->
+    <%= image_tag asset_path('logo_pinterest.png'), class: 'img-custom' %>
+  <% end %>
 
+  <!-- MOBILE : esto para funcione el resposivo y se combierta en boton cuando sea pequeña la pantalla-->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   
